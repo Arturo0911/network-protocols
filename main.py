@@ -5,11 +5,6 @@ import socket
 import threading
 
 
-class Message:
-    def __init__(self, device_id: int) -> None:
-        self.device_id = device_id
-
-
 class Commands:
     def __init__(self) -> None:
         self.TYPE_CUSTOM = "custom"
@@ -80,10 +75,6 @@ def decoding_messages():
     command_encoded = '23232c696d65693a3836383136363035313836343239362c413b0a'
 
     return command_encoded
-
-
-
-
 
 
 def handle_client(socket_client: socket.socket) -> None:
